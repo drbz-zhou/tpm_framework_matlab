@@ -1,0 +1,24 @@
+1. Datasets location:
+	Leg Band: ./data/LegDay/
+	Robot Skin: ./data/RoboSkin/
+	Table Cloth: ./data/table_v2/
+	note: ./data/Smart-Table/ is legacy and raw data. Because the plates need to be segmented in the orignial data
+
+2. TPM Feature set:
+
+frame descriptors: frame2des.m
+from frame descriptors to temporal features: fempfeatrues.m
+from data stream to temporal features: stream2tempfeats.m
+key frames: stream2kf.m
+from key frames to spatial features: frame2moments.m
+from data stream to spatial features: stream2spacfeats.m
+
+3. brancedNCA.m, KFoldNCA.m are the NCA division methods
+
+4.  ./ltfat/ is the library needed for fast wavelet transform
+
+5. for the paper:
+script_dining_feat_eval_p4.m and script_dining_feat_eval_p4.m for the table cloth dataset,
+script_legday_feat_eval_p1.m and script_legday_feat_eval_p2.m for the leg band dataset,
+script_roboskin_feat_eval_p1.m and script_roboskin_feat_eval_p1.m for the robot skin dataset
+are the files used to generate the results in the paper.
